@@ -26,51 +26,52 @@
 <head>
 
 
-    <meta charset="utf-8">
-    <title>Songlist JSON</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
 
-      <script src= "songlist.json"></script>
-      <script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Songlist JSON</title>
+          <script src= "songlist.json"></script>
+          <script>
 
-      function load() {
-              var mydata = song;
-
-
-              for(i = 0; i < mydata.length; i++){
-                  var tblRow = "<tr>" + "<td>" + song[i].name + "</td>" +
-                              "<td>" + song[i].artist + "</td>" + "<td>" + song[i].year + "</td>"
-                              + "<td>" + song[i].genre + "</td>" + "</tr>";
-                $(tblRow).appendTo("#songs tbody");
-
-              }
-        }
+          function load() {
+                  var mydata = song;
 
 
-        function filter(){
-            var input, filter, table, tr, td, i, value;
-            input = document.getElementById("filter").value;
-            table = document.getElementById("songs");
-            if(input != ""){
-                $("#songs tbody tr").remove();
-            }else{
-                $("#songs tbody tr").remove();
-                load();
+                  for(i = 0; i < mydata.length; i++){
+                      var tblRow = "<tr>" + "<td>" + song[i].name + "</td>" +
+                                  "<td>" + song[i].artist + "</td>" + "<td>" + song[i].year + "</td>"
+                                  + "<td>" + song[i].genre + "</td>" + "</tr>";
+                    $(tblRow).appendTo("#songs tbody");
+
+                  }
             }
-            for(i = 0; i < song.length; i++){
-                var tblRow = "<tr>" + "<td>" + song[i].name + "</td>" +
-                            "<td>" + song[i].artist + "</td>" + "<td>" + song[i].year + "</td>"
-                            + "<td>" + song[i].genre + "</td>" + "</tr>";
 
-                if(input == song[i].genre[0] || input == song[i].genre[1]){
-                      $(tblRow).appendTo("#songs tbody");
+
+            function filter(){
+                var input, filter, table, tr, td, i, value;
+                input = document.getElementById("filter").value;
+                table = document.getElementById("songs");
+                if(input != ""){
+                    $("#songs tbody tr").remove();
+                }else{
+                    $("#songs tbody tr").remove();
+                    load();
+                }
+                for(i = 0; i < song.length; i++){
+                    var tblRow = "<tr>" + "<td>" + song[i].name + "</td>" +
+                                "<td>" + song[i].artist + "</td>" + "<td>" + song[i].year + "</td>"
+                                + "<td>" + song[i].genre + "</td>" + "</tr>";
+
+                    if(input == song[i].genre[0] || input == song[i].genre[1]){
+                          $(tblRow).appendTo("#songs tbody");
+                    }
                 }
             }
-        }
 
-      </script>
-</head>
+          </script>
+    </head>
 
 <body onload = "load()">
 
