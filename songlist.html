@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<style>
+    table{
+       border: solid 1px #DDEEEE;
+       border-collapse: collapse;
+       border-spacing: 0;
+       font: normal 13px Arial, sans-serif;
+    }
+    table thead th {
+        background-color: #DDEFEF;
+        border: solid 1px #DDEEEE;
+        color: #336B6B;
+        padding: 10px;
+        text-align: left;
+        text-shadow: 1px 1px 1px #fff;
+    }
+    table tbody td {
+        border: solid 1px #DDEEEE;
+        color: #333;
+        padding: 10px;
+        text-shadow: 1px 1px 1px #fff;
+    }
+
+</style>
+<head>
+
+
+    <meta charset="utf-8">
+    <title>Songlist JSON</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+    </script>
+
+      <script src= "songlist.json"></script>
+      <script>
+
+      function load() {
+              var mydata = song;
+
+
+              for(i = 0; i < mydata.length; i++){
+                  var tblRow = "<tr>" + "<td>" + song[i].name + "</td>" +
+                              "<td>" + song[i].artist + "</td>" + "<td>" + song[i].year + "</td>"
+                              + "<td>" + song[i].genre + "</td>" + "</tr>";
+                $(tblRow).appendTo("#songs tbody");
+
+              }
+        }
+
+
+        function filter(){
+            var input, filter, table, tr, td, i, value;
+            input = document.getElementById("filter").value;
+            table = document.getElementById("songs");
+            if(input != ""){
+                $("#songs tbody tr").remove();
+            }else{
+                $("#songs tbody tr").remove();
+                load();
+            }
+            for(i = 0; i < song.length; i++){
+                var tblRow = "<tr>" + "<td>" + song[i].name + "</td>" +
+                            "<td>" + song[i].artist + "</td>" + "<td>" + song[i].year + "</td>"
+                            + "<td>" + song[i].genre + "</td>" + "</tr>";
+
+                if(input == song[i].genre[0] || input == song[i].genre[1]){
+                      $(tblRow).appendTo("#songs tbody");
+                }
+            }
+        }
+
+      </script>
+</head>
+
+<body onload = "load()">
+
+    <script>
+        //mydata = song;
+        var string = JSON.stringify(song);
+        document.write(string + "<br>" + "<br>" +"<br>");
+
+    </script>
+
+    <select id="filter">
+        <option value="">Please Select</option>
+        <option value='Pop'>Pop</option>
+        <option value='Rock'>Rock</option>
+        <option value='Hip Hop'>Hip Hop</option>
+    </select>
+
+    <button type="submit" name="submit" value="submit" onclick= "filter()">Filter </button>
+
+    <table id= "songs" border= 2>
+        <thead>
+            <th> Song Title</th>
+            <th> Artist</th>
+            <th> Year Released</th>
+            <th> Genre</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

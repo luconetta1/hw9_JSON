@@ -1,0 +1,92 @@
+// JSON Document
+
+ song = [
+    {
+        "name" : "Jessie's Girl",
+        "artist" : "Rick Springfield",
+        "year" : "1981",
+        "genre" : ["Pop", "Rock"]
+    },
+    {
+        "name" : "What's Love Got to Do with it",
+        "artist" : "Tina Turner",
+        "year" : "1984",
+        "genre" : ["Pop"]
+    },
+    {
+        "name" : "Billie Jean",
+        "artist" : "Michael Jackson",
+        "year" : "1988",
+        "genre" : ["Pop"]
+    },
+    {
+        "name" : "If I Could Turn Back Time",
+        "artist" : "Cher",
+        "year" : "1989",
+        "genre" : ["Pop"]
+    },
+    {
+        "name" : "Lay All Your Love On Me",
+        "artist" : "A",
+        "year" : "1981",
+        "genre" : ["Pop"]
+    },
+    {
+        "name" : "Take On Me",
+        "artist" : "a-ha",
+        "year" : "1984",
+        "genre" : ["Pop"]
+    },
+    {
+        "name" : "I Won't Back Down",
+        "artist" : "Tom Petty",
+        "year" : "1989",
+        "genre" : ["Pop"]
+    },
+    {
+        "name" : "You Give Love a Bad Name",
+        "artist" : "Bon Jovi",
+        "year" : "1986",
+        "genre" : ["Rock"]
+    },
+    {
+        "name" : "Africa",
+        "artist" : "Toto",
+        "year" : "1981",
+        "genre" : ["Rock", "Pop"]
+    },
+    {
+        "name" : "Never Gonna Give You Up",
+        "artist" : "Rick Astley",
+        "year" : "1987",
+        "genre" : ["Pop"]
+    },
+    {
+        "name" : "The World is Yours",
+        "artist" : "Nas",
+        "year" : "1994",
+        "genre" : ["Hip Hop"]
+    },
+    {
+        "name" : "Hypnotize",
+        "artist" : "The Notorious BIG",
+        "year" : "1997",
+        "genre" : ["Hip Hop"]
+    },
+    {
+        "name" : "My Name Is",
+        "artist" : "Eminem",
+        "year" : "1999",
+        "genre" : ["Hip Hop"]
+    },
+    {
+        "name" : "Another One Bites the Dust",
+        "artist" : "Queen",
+        "year" : "1980",
+        "genre" : ["Rock"]
+    }
+
+
+
+
+]
